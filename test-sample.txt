@@ -2,29 +2,60 @@
 SELECT company.name, AnnualReports.expected_growth
 FROM company, AnnualReports
 WHERE AnnualReports.year = 2014 and AnnualReports.expected_growth > 3 and AnnualReports.ticker = company.ticker;
+  name   | expected_growth 
+---------+-----------------
+ speduke |            2000
+(1 row)
 
 -- Companies that have a female CEO
 SELECT ceo.name, company.name
 FROM CEO, company
 WHERE company.ceo_name = ceo.name AND ceo.gender = 'f';
+ name |  name   
+------+---------
+ Mary | atoduke
+(1 row)
 
 --yearly revenue for company SPE
 Select ticker, year, yearly_revenue
 FROM AnnualReports
 WHERE ticker='SPE';
+ ticker | year | yearly_revenue 
+--------+------+----------------
+ SPE    | 2014 |         342342
+ SPE    | 2015 |          23234
+ SPE    | 2016 |          12394
+(3 rows)
 
 --Max quarterly p/e for every company
 SELECT ticker, MAX(PperE) FROM QuarterlyReports GROUP BY ticker;
+ ticker | max 
+--------+-----
+ SPE    |   9
+ ATO    |  93
+(2 rows)
 
 --Risk of every tech company in every quarter in 2015 
 SELECT InIndustry.ticker, QuarterlyReports.year, QuarterlyReports.quarter, QuarterlyReports.risk
 FROM InIndustry, QuarterlyReports 
 WHERE InIndustry.industry_name = 'Tech' AND InIndustry.ticker = QuarterlyReports.ticker
 AND QuarterlyReports.year = 2015;
+ ticker | year | quarter | risk 
+--------+------+---------+------
+ SPE    | 2015 |       1 |    5
+ SPE    | 2015 |       2 |    2
+ SPE    | 2015 |       3 |    5
+ SPE    | 2015 |       4 |    1
+(4 rows)
 
 --avg growth of every company based off of annual reports
 SELECT industry_name, AVG(AnnualReports.expected_growth) AS avg_growth
 FROM InIndustry, AnnualReports
 WHERE InIndustry.ticker = AnnualReports.ticker
 GROUP BY industry_name;
+ industry_name |    avg_growth     
+---------------+-------------------
+ Tech          |  833.333333333333
+ oil           | -46.6666666666667
+(2 rows)
 
