@@ -16,3 +16,13 @@ WHERE ticker='SPE';
 --Max quarterly p/e for every company
 SELECT ticker, MAX(PperE) FROM QuarterlyReports GROUP BY ticker;
 
+--Risk of every tech company in every quarter in 2015 
+SELECT InIndustry.ticker, QuarterlyReports.year, QuarterlyReports.quarter, QuarterlyReports.risk
+FROM InIndustry, QuarterlyReports 
+WHERE InIndustry.industry_name = 'Tech' AND InIndustry.ticker = QuarterlyReports.ticker
+AND QuarterlyReports.year = 2015;
+
+SELECT industry_name, AVG(AnnualReports.expected_growth) AS avg_growth
+FROM InIndustry, AnnualReports
+WHERE InIndustry.ticker = AnnualReports.ticker
+GROUP BY industry_name;
