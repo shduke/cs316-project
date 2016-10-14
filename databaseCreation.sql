@@ -1,9 +1,9 @@
 --RUN THESE COMMANDS TO DELETE THE DB
 --\c template0
---DROP DATABASE financedb;
+--dropdb financedb;
 
 --RUN THESE COMMANDS TO CREATE THE DB
---CREATEDB financedb;
+--createdb financedb;
 --psql financedb
 --\i databaseCreation.sql
 
