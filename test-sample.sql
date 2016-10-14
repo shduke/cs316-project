@@ -28,3 +28,6 @@ FROM InIndustry, AnnualReports
 WHERE InIndustry.ticker = AnnualReports.ticker
 GROUP BY industry_name;
 
+--Updates SPE AnnualReports in the year 2016
+UPDATE AnnualReports SET yearly_revenue = 100000 WHERE ticker = 'SPE' AND year = 2016;
+

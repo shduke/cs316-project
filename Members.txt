@@ -1,0 +1,20 @@
+Members
+Will Rollins
+Andrew Bihl
+Ezra Lieblich
+Sean Hudson
+Diane Hadley
+
+Roles 
+Everyone- All members met to formulate and plan overall project idea and discuss structure of database.
+
+
+Will: Wrote some queries, did research on attaining real data, made fake data
+
+Andrew Bihl: Wrote description of program and web interface.
+
+Ezra: Wrote SQL Queries, assumptions of database, and helped insert into database
+
+Sean Hudson: created SQL database and populating data description
+
+Diane: E/R Diagram, Schema, and SQL Queries

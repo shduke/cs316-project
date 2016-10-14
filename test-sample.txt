@@ -24,7 +24,7 @@ WHERE ticker='SPE';
 --------+------+----------------
  SPE    | 2014 |         342342
  SPE    | 2015 |          23234
- SPE    | 2016 |          12394
+ SPE    | 2016 |         100000
 (3 rows)
 
 --Max quarterly p/e for every company
@@ -59,3 +59,6 @@ GROUP BY industry_name;
  oil           | -46.6666666666667
 (2 rows)
 
+--Updates SPE AnnualReports in the year 2016
+UPDATE AnnualReports SET yearly_revenue = 100000 WHERE ticker = 'SPE' AND year = 2016;
+UPDATE 1
