@@ -58,129 +58,50 @@ CREATE TABLE QuarterlyReports
 );
 
 --populate the database with fake data
-INSERT INTO CEO
-(name, age, salary, gender)
-VALUES
-('john', 12, 123333, 'm')
+INSERT INTO CEO VALUES ('john', 12, 123333, 'm');
 
-INSERT INTO CEO
-(name, age, salary, gender)
-VALUES
-('Mary', 12, 123333, 'f')
+INSERT INTO CEO VALUES ('Mary', 12, 123333, 'f');
 
-INSERT INTO Company
-(ticker, name, revenue, stock_exchange, ceo_name)
-VALUES	
-('SPE', 123456789, 'NYSE', 'john')
+INSERT INTO Company VALUES ('SPE', 123456789, 'NYSE', 'john');
 
-INSERT INTO company
-(ticker, name, revenue, stock_exchange, ceo_name)
-VALUES
-('ATO', 23, 'NASDAQ', 'Mary')
+INSERT INTO company VALUES ('ATO', 23, 'NASDAQ', 'Mary');
 
-INSERT INTO InIndustry
-(ticker, industry_name)
-VALUES
-('SPE', 'Tech')
+INSERT INTO InIndustry VALUES ('SPE', 'Tech');
 
-INSERT INTO InIndustry
-(ticker, industry_name)
-VALUES
-('ATO', 'oil'
+INSERT INTO InIndustry VALUES ('ATO', 'oil');
 
-INSERT INTO AnnualReports
-(ticker, year, risk, expected_growth, yearly_revenue, PperE)
-VALUES
-('SPE', 2014, 3, 2000, 342342, 5)
+INSERT INTO AnnualReports VALUES ('SPE', 2014, 3, 2000, 342342, 5);
 
+INSERT INTO AnnualReports VALUES ('SPE', 2015, 1, 200, 232342232, 3);
 
-INSERT INTO AnnualReports
-(ticker, year, risk, expected_growth, yearly_revenue, PperE)
-VALUES
-('SPE', 2015, 1, 200, 232342232, 3)
+INSERT INTO AnnualReports VALUES ('SPE', 2016, 2, 300, 32323902394, 10);
 
-INSERT INTO AnnualReports
-(ticker, year, risk, expected_growth, yearly_revenue, PperE)
-VALUES
-('SPE', 2016, 2, 300, 32323902394, 10)
+INSERT INTO AnnualReports VALUES ('ATO', 2014, 40, -20, 342342234234234, 33);
 
+INSERT INTO AnnualReports VALUES ('ATO', 2015, 35, -10, 12341234, 20);
 
-INSERT INTO AnnualReports
-(ticker, year, risk, expected_growth, yearly_revenue, PperE)
-VALUES
-('ATO', 2014, 40, -20, 342342234234234, 33)
+INSERT INTO AnnualReports VALUES ('ATO', 2016, 2323, -110, 1234, 50);
 
-INSERT INTO AnnualReports
-(ticker, year, risk, expected_growth, yearly_revenue, PperE)
-VALUES
-('ATO', 2015, 35, -10, 12341234, 20)
+INSERT INTO QuarterlyReports VALUES ('SPE', 2014, 3, 3, 700, 342342, 5);
 
-INSERT INTO AnnualReports
-(ticker, year, risk, expected_growth, yearly_revenue, PperE)
-VALUES
-('ATO', 2016, 2323, -110, 1234, 50)
+INSERT INTO QuarterlyReports VALUES ('SPE', 2014, 4, 3, 700, 342342, 5);
 
+INSERT INTO QuarterlyReports VALUES ('SPE', 2015, 1, 5, 80, 32323902394, 5);
 
-INSERT INTO QuarterlyReports
-(ticker, year, quarter, risk, expected_growth, yearly_revenue, PperE)
-VALUES
-('SPE', 2014, 3, 3, 700, 342342, 5)
+INSERT INTO QuarterlyReports VALUES ('SPE', 2015, 2, 2, 80, 32323902394, 9);
 
-INSERT INTO QuarterlyReports
-(ticker, year, quarter, risk, expected_growth, yearly_revenue, PperE)
-VALUES
-('SPE', 2014, 4, 3, 700, 342342, 5)
+INSERT INTO QuarterlyReports VALUES ('SPE', 2015, 3, 5, 80, 32323902394, 2);
 
-INSERT INTO QuarterlyReports
-(ticker, year, quarter, risk, expected_growth, yearly_revenue, PperE)
-VALUES
-('SPE', 2015, 1, 5, 80, 32323902394, 5)
+INSERT INTO QuarterlyReports VALUES ('SPE', 2015, 4, 1, 80, 32323902394, 1);
 
-INSERT INTO QuarterlyReports
-(ticker, year, quarter, risk, expected_growth, yearly_revenue, PperE)
-VALUES
-('SPE', 2015, 2, 2, 80, 32323902394, 9)
+INSERT INTO QuarterlyReports VALUES ('ATO', 2014, 3, 43, -10, 234123423, 23);
 
-INSERT INTO QuarterlyReports
-(ticker, year, quarter, risk, expected_growth, yearly_revenue, PperE)
-VALUES
-('SPE', 2015, 3, 5, 80, 32323902394, 2)
+INSERT INTO QuarterlyReports VALUES ('ATO', 2014, 4, 13, -34, 234123423, 33);
 
-INSERT INTO QuarterlyReports
-(ticker, year, quarter, risk, expected_growth, yearly_revenue, PperE)
-VALUES
-('SPE', 2015, 4, 1, 80, 32323902394, 1)
+INSERT INTO QuarterlyReports VALUES ('ATO', 2015, 1, 37, -20, 123423, 33);
 
---ATO quarterly reports
+INSERT INTO QuarterlyReports VALUES ('ATO', 2015, 2, 50, -30, 123423, 93);
 
-INSERT INTO QuarterlyReports
-(ticker, year, quarter, risk, expected_growth, yearly_revenue, PperE)
-VALUES
-('ATO', 2014, 3, 43, -10, 234123423, 23)
+INSERT INTO QuarterlyReports VALUES ('ATO', 2015, 3, 23, 10, 123423, 23);
 
-INSERT INTO QuarterlyReports
-(ticker, year, quarter, risk, expected_growth, yearly_revenue, PperE)
-VALUES
-('ATO', 2014, 4, 13, -34, 234123423, 33)
-
-INSERT INTO QuarterlyReports
-(ticker, year, quarter, risk, expected_growth, yearly_revenue, PperE)
-VALUES
-('ATO', 2015, 1, 37, -20, 123423, 33)
-
-INSERT INTO QuarterlyReports
-(ticker, year, quarter, risk, expected_growth, yearly_revenue, PperE)
-VALUES
-('ATO', 2015, 2, 50, -30, 123423, 93)
-
-INSERT INTO QuarterlyReports
-(ticker, year, quarter, risk, expected_growth, yearly_revenue, PperE)
-VALUES
-('ATO', 2015, 3, 23, 10, 123423, 23)
-
-INSERT INTO QuarterlyReports
-(ticker, year, quarter, risk, expected_growth, yearly_revenue, PperE)
-VALUES
-('ATO', 2015, 4, 60, -50, 123423, 33)
-
-
+INSERT INTO QuarterlyReports VALUES ('ATO', 2015, 4, 60, -50, 123423, 33);
